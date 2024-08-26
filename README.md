@@ -32,4 +32,20 @@ Unity3D (v2022.3.16f1)
 - Select the newly extracted folder and click on OK
 - Wait a while as Unity Sets up the project for you.
 - Click on the play button
+    OR
+- Build and run the project
+
+# Levels of the Challenge Completed
+# Level 1
+- I created the player controller and the pulpit spawner and made them read the required values from the given JSON File.
+# Level 2
+- I added a score system that updated the score in real time based on the number of platforms the player walks on, and shows them in the UI
+# Level 3
+- Added a Main Menu and a GAME OVER Screen when the player launches the game and fails the game respectively
+# Bonus
+- Gave the player character some personality and a cool looking model.
+- Added music to the game world.
+- Added a small custom image for the game's main menu.
+- Added " Return to menu " to the GAME OVER screen.
+- Added " Quit Game " functionality to Main Menu.
 
