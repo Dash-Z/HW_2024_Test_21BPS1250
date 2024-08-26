@@ -23,13 +23,12 @@ public class RandomPlatformSpawner : MonoBehaviour
     public float maxDespawnTime;
     public float platformSpawnInterval;
 
-    private int platformCount = 0; // Counter to keep track of active platforms
+    private int platformCount = 0;
 
     void Start()
     {
         LoadConfiguration();
 
-        // Start the spawning process with the first platform
         Vector3 initialPosition = Vector3.zero;
         SpawnPlatform(initialPosition);
 
@@ -86,6 +85,8 @@ public class RandomPlatformSpawner : MonoBehaviour
             platformCount--;
         }
     }
+
+    // " Howdy, partner ! " --Arthur Morgan, Red Dead Redemption 2 ( 2018 )
 
     IEnumerator SpawnPlatformsRepeatedly()
     {

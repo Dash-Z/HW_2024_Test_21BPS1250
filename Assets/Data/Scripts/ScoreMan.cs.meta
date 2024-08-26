@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 141406985655c9b498981a454d344074
+guid: e21fac5721069734eb1916699f9e71fe
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Pulpits: {fileID: 7917891744706106718, guid: d38f6b6cda8b6c2438d7f8c3c082a9c8,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -38,7 +38,10 @@ public class PlayerController : MonoBehaviour
     //Player Speed
     private float playerspeed;
     private float speedmult = 3.5f;
-    
+
+    private ScoreManager scoreManager;
+    private GameObject lastPlatform;
+
     void loadconfig()
     {
         TextAsset json = Resources.Load<TextAsset>("doofus_diary");
@@ -85,9 +88,22 @@ public class PlayerController : MonoBehaviour
         dir.y= velocity;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Platform") && other.gameObject != lastPlatform)
+        {
+            lastPlatform = other.gameObject;
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore(1);
+            }
+        }
+    }
+
     public void Start()
     {
         loadconfig();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     public void Update()
