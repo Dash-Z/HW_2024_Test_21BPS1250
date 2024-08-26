@@ -9,6 +9,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [System.Serializable]
+    public class PData
+    {
+        public float speed;
+    }
+
+    [System.Serializable]
+    public class Gdat
+    {
+        public PData player_data;
+    }
+
     //Movement Variables
     private Vector2 input;
     private CharacterController charc;
@@ -23,7 +35,23 @@ public class PlayerController : MonoBehaviour
     private float cvelocity;
     private float velocity;
 
-    [SerializeField] private float speed;
+    private float playerspeed;
+    private float speedmult = 3.5f;
+
+    void loadconfig()
+    {
+        TextAsset json = Resources.Load<TextAsset>("doofus_diary");
+
+        if (json != null)
+        {
+            Gdat gameData = JsonUtility.FromJson<Gdat>(json.text);
+            playerspeed = gameData.player_data.speed;
+        }
+        else
+        {
+            Debug.LogError("Config file not found.");
+        }
+    }
 
     private void Awake()
     {
@@ -32,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void MoveChar()
     {
-        charc.Move(dir*speed*Time.deltaTime);
+        charc.Move(dir*playerspeed*speedmult*Time.deltaTime);
     }
 
     private void RotateChar()
@@ -55,6 +83,12 @@ public class PlayerController : MonoBehaviour
         
         dir.y= velocity;
     }
+
+    public void Start()
+    {
+        loadconfig();
+    }
+
     public void Update()
     {
         ApplyGravity();
