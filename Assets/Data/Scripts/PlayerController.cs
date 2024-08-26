@@ -35,9 +35,10 @@ public class PlayerController : MonoBehaviour
     private float cvelocity;
     private float velocity;
 
+    //Player Speed
     private float playerspeed;
     private float speedmult = 3.5f;
-
+    
     void loadconfig()
     {
         TextAsset json = Resources.Load<TextAsset>("doofus_diary");
