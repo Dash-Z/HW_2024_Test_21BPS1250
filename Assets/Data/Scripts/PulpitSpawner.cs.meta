@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 141406985655c9b498981a454d344074
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Pulpits: {fileID: 4300906269860275666, guid: c3706081b48551849a5a3f3bd237b1f0,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
