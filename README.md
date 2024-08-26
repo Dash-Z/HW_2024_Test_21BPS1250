@@ -21,3 +21,15 @@ Unity3D (v2022.3.16f1)
 - Fully funtional FAIL or GAME OVER menu allowing the user to either go back to main menu or retry the game
 - Background ambient music
 
+
+# How to Open the project
+- Click on the green colored ' <> Code ' icon at the top of the repository
+- Download as zip file
+- Extract it somewhere safe and accesible 
+- Open UNITY HUB
+- Click on ADD
+- Browse to the folder where you extracted the zip file
+- Select the newly extracted folder and click on OK
+- Wait a while as Unity Sets up the project for you.
+- Click on the play button
+
