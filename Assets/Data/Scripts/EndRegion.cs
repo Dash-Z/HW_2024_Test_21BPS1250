@@ -14,6 +14,6 @@ public class DeathRegion : MonoBehaviour
     private void ReloadScene()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        SceneManager.LoadScene("GameOver");
     }
 }
